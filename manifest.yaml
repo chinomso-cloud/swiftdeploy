@@ -1,0 +1,13 @@
+network:
+  driver_type: bridge
+  name: keed-net-stage4          
+
+nginx:
+  image: nginx:latest
+  port: 7070                     
+  proxy_timeout: 60
+
+services:
+  image: keed-swift-node:v1      
+  mode: canary
+  port: 5050                     
